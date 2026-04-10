@@ -69,7 +69,7 @@ export function About() {
             </p>
             
             <p className="text-muted-foreground leading-relaxed">
-              I thrive on solving complex technical challenges and staying at the forefront of modern web technologies. My approach combines technical excellence with a keen eye for design and user behavior.
+              I thrive on solving complex technical challenges and staying at the forefront of modern web technologies. My approach combines technical excellence with a deep understanding of system architecture and performance optimization.
             </p>
 
             <a

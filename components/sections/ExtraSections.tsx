@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { services, testimonials } from "../../app/data/index";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Layout, Server, Palette, Quote, Star } from "lucide-react";
+import { Layout, Server, Workflow, Quote, Star } from "lucide-react";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const icons: { [key: string]: any } = {
   Layout,
   Server,
-  Palette,
+  Workflow,
 };
 
 export function ExtraSections() {
@@ -67,7 +67,7 @@ export function ExtraSections() {
             <div className="text-center space-y-6">
               <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">My Services</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                I offer comprehensive solutions for modern web development, from conceptual design to scalable backend architectures.
+                I offer comprehensive solutions for modern web development, from high-performance frontends to scalable backend architectures.
               </p>
             </div>
 

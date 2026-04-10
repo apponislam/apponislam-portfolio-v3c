@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Appon Islam",
   role: "Full Stack Developer",
-  tagline: "Building high-performance, scalable web applications with premium UI/UX design and smooth animations.",
+  tagline: "Building high-performance, scalable web applications with robust backend systems and seamless API integrations.",
   email: "appon.islam@example.com",
   location: "Dhaka, Bangladesh",
   resumeUrl: "/resume.pdf",
@@ -117,18 +117,18 @@ export const blogs = [
 export const services = [
   {
     title: "Web Development",
-    description: "Building fast, responsive, and SEO-friendly websites using modern frameworks.",
+    description: "Building fast, responsive, and SEO-friendly full-stack web applications using modern frameworks.",
     icon: "Layout",
   },
   {
-    title: "Backend APIs",
-    description: "Developing robust and scalable backend services and RESTful APIs.",
+    title: "Backend Development",
+    description: "Developing robust, scalable backend services and high-performance server-side architectures.",
     icon: "Server",
   },
   {
-    title: "UI/UX Design",
-    description: "Designing clean, modern, and user-centric interfaces for web applications.",
-    icon: "Palette",
+    title: "API Integration",
+    description: "Seamlessly connecting frontend and backend systems with secure and efficient RESTful and GraphQL APIs.",
+    icon: "Workflow",
   },
 ];
 
