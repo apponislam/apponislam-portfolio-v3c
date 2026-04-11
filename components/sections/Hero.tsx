@@ -26,24 +26,24 @@ export function Hero() {
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
       tl.fromTo(imageRef.current,
-        { scale: 0.8, opacity: 0, rotate: -5 },
-        { scale: 1, opacity: 1, rotate: 0, duration: 1.5, ease: "elastic.out(1, 0.5)" }
+        { scale: 0.9, opacity: 0, rotate: -3 },
+        { scale: 1, opacity: 1, rotate: 0, duration: 1.2, ease: "power2.out" }
       )
       .fromTo(titleRef.current, 
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }, "-=1"
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8 }, "-=0.8"
       )
       .fromTo(subtitleRef.current, 
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }, "-=0.8"
-      )
-      .fromTo(ctaRef.current, 
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8 }, "-=0.6"
       )
-      .fromTo(socialRef.current, 
+      .fromTo(ctaRef.current, 
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 }, "-=0.4"
+        { y: 0, opacity: 1, duration: 0.6 }, "-=0.4"
+      )
+      .fromTo(socialRef.current, 
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6 }, "-=0.3"
       );
 
       // Floating image motion

@@ -39,33 +39,33 @@ export function Contact() {
     const ctx = gsap.context(() => {
       // Reveal items on scroll
       gsap.fromTo(".contact-item", 
-        { x: -50, opacity: 0 },
+        { x: -30, opacity: 0 },
         {
           scrollTrigger: {
             trigger: ".contact-grid",
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
           x: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
         }
       );
 
       gsap.fromTo(".contact-form", 
-        { x: 50, opacity: 0 },
+        { x: 30, opacity: 0 },
         {
           scrollTrigger: {
             trigger: ".contact-grid",
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
           x: 0,
           opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
+          duration: 0.6,
+          ease: "power2.out",
         }
       );
     }, containerRef);

@@ -17,28 +17,28 @@ export function About() {
       gsap.from(".about-content > *", {
         scrollTrigger: {
           trigger: ".about-content",
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
-        y: 50,
+        y: 30,
         opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
       });
 
       // Timeline items reveal
       gsap.from(".timeline-item", {
         scrollTrigger: {
           trigger: ".timeline-container",
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
-        x: (index) => (index % 2 === 0 ? -50 : 50),
+        x: (index) => (index % 2 === 0 ? -30 : 30),
         opacity: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power3.out",
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
       });
     }, containerRef);
 

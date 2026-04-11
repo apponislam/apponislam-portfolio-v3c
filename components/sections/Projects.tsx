@@ -25,17 +25,17 @@ export function Projects() {
       // Re-animate grid items when filter changes or initially
       gsap.fromTo(
         ".project-card",
-        { opacity: 0, scale: 0.9, y: 20 },
+        { opacity: 0, scale: 0.95, y: 20 },
         { 
           opacity: 1, 
           scale: 1, 
           y: 0, 
-          duration: 0.6, 
-          stagger: 0.1, 
-          ease: "power3.out",
+          duration: 0.5, 
+          stagger: 0.08, 
+          ease: "power2.out",
           scrollTrigger: {
             trigger: gridRef.current,
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           }
         }

@@ -17,18 +17,18 @@ export function Blog() {
     const ctx = gsap.context(() => {
       // Reveal items on scroll
       gsap.fromTo(".blog-card", 
-        { y: 50, opacity: 0 },
+        { y: 30, opacity: 0 },
         {
           scrollTrigger: {
             trigger: ".blog-grid",
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
         }
       );
     }, containerRef);

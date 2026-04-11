@@ -22,35 +22,35 @@ export function ExtraSections() {
     const ctx = gsap.context(() => {
       // Reveal services
       gsap.fromTo(".service-card", 
-        { y: 50, opacity: 0 },
+        { y: 30, opacity: 0 },
         {
           scrollTrigger: {
             trigger: ".services-grid",
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
         }
       );
 
       // Reveal testimonials
       gsap.fromTo(".testimonial-card", 
-        { scale: 0.9, opacity: 0 },
+        { scale: 0.95, opacity: 0 },
         {
           scrollTrigger: {
             trigger: ".testimonials-grid",
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
           scale: 1,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
         }
       );
     }, containerRef);

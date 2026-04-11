@@ -6,13 +6,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { 
   CheckCircle2, 
-  Code2, 
+   
   Database, 
-  Globe, 
+ 
   Layers, 
-  Layout, 
+   
   MessageSquare, 
-  Server, 
+   
   ShieldCheck, 
   Users, 
   Zap,
@@ -77,19 +77,19 @@ export function Skills() {
     const ctx = gsap.context(() => {
       // Animate items on scroll
       gsap.fromTo(".skill-item", 
-        { opacity: 0, scale: 0.8, y: 20 },
+        { opacity: 0, scale: 0.9, y: 15 },
         {
           scrollTrigger: {
             trigger: ".skills-grid",
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
           scale: 1,
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          stagger: 0.05,
-          ease: "back.out(1.7)",
+          duration: 0.4,
+          stagger: 0.03,
+          ease: "power2.out",
         }
       );
     }, containerRef);
