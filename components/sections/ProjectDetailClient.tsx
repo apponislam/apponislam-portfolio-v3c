@@ -69,10 +69,10 @@ export default function ProjectDetailClient({ project }: { project: any }) {
 
                     {/* Modern Slider Gallery */}
                     <div className="relative group">
-                        <div className="relative aspect-[21/9] rounded-[32px] overflow-hidden border border-border/40 shadow-2xl bg-secondary/20">
+                        <div className="relative aspect-21/9 rounded-4xl overflow-hidden border border-border/40 shadow-2xl bg-secondary/20">
                             <div ref={sliderRef} className="flex h-full w-full">
                                 {images.map((img, index) => (
-                                    <div key={index} className="relative flex-shrink-0 w-full h-full">
+                                    <div key={index} className="relative shrink-0 w-full h-full">
                                         <Image src={img} alt={`${project.title} slide ${index + 1}`} fill className="object-cover" priority={index === 0} />
                                     </div>
                                 ))}
@@ -117,7 +117,7 @@ export default function ProjectDetailClient({ project }: { project: any }) {
                                         const [title, desc] = feature.split(": ");
                                         return (
                                             <div key={index} className="flex gap-4 p-4 rounded-2xl border border-border/40 hover:border-primary/20 transition-all group">
-                                                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                                <div className="shrink-0 w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                                                     <CheckCircle2 className="w-4 h-4" />
                                                 </div>
                                                 <div className="space-y-0.5">

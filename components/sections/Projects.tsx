@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { projects } from "../../app/data/index";
 import gsap from "gsap";
-import { ExternalLink, CodeXml, Eye } from "lucide-react";
+import { CodeXml, Eye } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";

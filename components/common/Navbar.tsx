@@ -81,7 +81,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile Nav */}
-            <div className={cn("fixed inset-0 top-[72px] bg-background/95 backdrop-blur-lg z-40 md:hidden transition-transform duration-300 ease-in-out transform", isOpen ? "translate-x-0" : "translate-x-full")}>
+            <div className={cn("fixed inset-0 top-18 bg-background/95 backdrop-blur-lg z-40 md:hidden transition-transform duration-300 ease-in-out transform", isOpen ? "translate-x-0" : "translate-x-full")}>
                 <div className="flex flex-col items-center justify-center h-full space-y-8 p-6">
                     {navLinks.map((link) => (
                         <Link key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-2xl font-semibold text-muted-foreground hover:text-primary transition-colors">
