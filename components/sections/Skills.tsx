@@ -9,33 +9,33 @@ import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const skillIcons: { [key: string]: any } = {
+const skillIcons: { [key: string]: { icon: string; color: string } } = {
     // Frontend
-    HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    Bootstrap: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    TypeScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    Redux: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    HTML: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg", color: "#E34F26" },
+    CSS: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg", color: "#1572B6" },
+    Bootstrap: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg", color: "#7952B3" },
+    "Tailwind CSS": { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", color: "#06B6D4" },
+    JavaScript: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg", color: "#F7DF1E" },
+    TypeScript: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg", color: "#3178C6" },
+    "React.js": { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "#61DAFB" },
+    "Next.js": { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", color: "#000000" },
+    Redux: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg", color: "#764ABC" },
 
     // Backend
-    "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    "Express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    PostgreSQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    Prisma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-    "Socket.IO": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-    Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    "Node.js": { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg", color: "#339933" },
+    "Express.js": { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", color: "#000000" },
+    MongoDB: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg", color: "#47A248" },
+    PostgreSQL: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg", color: "#4169E1" },
+    Prisma: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg", color: "#2D3748" },
+    "Socket.IO": { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg", color: "#010101" },
+    Firebase: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", color: "#FFCA28" },
 
     // Tools & Others
-    Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    GitHub: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    Nginx: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
-    Vercel: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
-    Postman: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    Git: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg", color: "#F05032" },
+    GitHub: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", color: "#181717" },
+    Nginx: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg", color: "#009639" },
+    Vercel: { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg", color: "#000000" },
+    Postman: { icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg", color: "#FF6C37" },
 };
 
 const lucideFallbacks: { [key: string]: any } = {
@@ -95,28 +95,31 @@ export function Skills() {
         <section id="skills" ref={containerRef} className="section-padding bg-background overflow-hidden">
             <div className="container-wide">
                 <div className="space-y-16">
-                    <div className="text-center space-y-6">
-                        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">My Tech Stack</h2>
-                        <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">I specialize in a wide range of modern web technologies, from frontend frameworks to backend systems and infrastructure.</p>
+                    <div className="text-center space-y-4">
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">My Tech Stack</h2>
+                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">I specialize in a wide range of modern web technologies, from frontend frameworks to backend systems and infrastructure.</p>
                     </div>
 
-                    <div className="skills-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+                    <div className="skills-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
                         {skills.map((skill, index) => {
-                            const iconUrl = skillIcons[skill];
+                            const skillData = skillIcons[skill];
                             const FallbackIcon = lucideFallbacks[skill] || CheckCircle2;
 
                             return (
-                                <div key={index} className="skill-item group p-6 rounded-2xl bg-secondary/30 hover:bg-primary transition-all duration-300 flex flex-col items-center gap-4 text-center cursor-default border border-border/50 hover:scale-105">
-                                    <div className="relative w-12 h-12 flex items-center justify-center p-2 bg-background rounded-xl group-hover:bg-primary-foreground/10 transition-colors shadow-inner overflow-hidden">
-                                        {iconUrl ? (
+                                <div key={index} className="skill-item group relative p-5 rounded-2xl glass hover:border-primary/50 transition-all duration-500 flex flex-col items-center gap-3 text-center cursor-default overflow-hidden">
+                                    {/* Background Glow */}
+                                    <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-2xl" style={{ backgroundColor: skillData?.color || "var(--primary)" }} />
+
+                                    <div className="relative w-12 h-12 flex items-center justify-center p-2.5 bg-secondary/50 rounded-xl group-hover:bg-background transition-all duration-500 shadow-inner overflow-hidden">
+                                        {skillData ? (
                                             <div className="relative w-full h-full flex items-center justify-center">
-                                                <Image src={iconUrl} alt={skill} fill className="object-contain group-hover:brightness-0 group-hover:invert transition-all" />
+                                                <Image src={skillData.icon} alt={skill} fill className="object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 dark:invert-[0.1] dark:group-hover:invert-0" />
                                             </div>
                                         ) : (
-                                            <FallbackIcon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
+                                            <FallbackIcon className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-500" />
                                         )}
                                     </div>
-                                    <span className="text-sm font-bold text-muted-foreground group-hover:text-primary-foreground transition-colors">{skill}</span>
+                                    <span className="relative text-xs font-bold text-muted-foreground group-hover:text-foreground transition-colors duration-500">{skill}</span>
                                 </div>
                             );
                         })}
