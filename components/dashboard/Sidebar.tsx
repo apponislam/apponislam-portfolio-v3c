@@ -12,6 +12,7 @@ import {
   Wrench,
   LineChart,
   MessageSquare,
+  Activity,
 } from "lucide-react";
 
 const navigation = [
@@ -23,6 +24,7 @@ const navigation = [
   { name: "Services", href: "/dashboard/services", icon: Wrench },
   { name: "Skills", href: "/dashboard/skills", icon: LineChart },
   { name: "Contacts", href: "/dashboard/contacts", icon: MessageSquare },
+  { name: "Audit Logs", href: "/dashboard/audit", icon: Activity },
 ];
 
 export function Sidebar() {
