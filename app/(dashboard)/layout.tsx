@@ -4,11 +4,11 @@ import { Topbar } from "@/components/dashboard/Topbar";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen w-full bg-background">
+    <div className="flex h-screen w-full bg-background overflow-hidden">
       <Sidebar />
-      <div className="flex flex-col sm:gap-4 flex-1 w-full max-w-full">
+      <div className="flex flex-col flex-1 w-full max-w-full h-full overflow-hidden">
         <Topbar />
-        <main className="flex-1 p-4 md:p-6 overflow-y-auto">
+        <main className="flex-1 p-4 md:p-6 overflow-y-auto custom-scrollbar">
           {children}
         </main>
       </div>

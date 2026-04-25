@@ -3,11 +3,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 export default function SkillsPage() {
   const skills = [
-    { name: "React", category: "Frontend", proficiency: "95%", icon: "react-icon" },
-    { name: "Node.js", category: "Backend", proficiency: "85%", icon: "node-icon" },
-    { name: "Tailwind CSS", category: "Frontend", proficiency: "98%", icon: "tailwind-icon" },
-    { name: "MongoDB", category: "Database", proficiency: "80%", icon: "mongo-icon" },
-    { name: "TypeScript", category: "Languages", proficiency: "90%", icon: "ts-icon" },
+    { name: "React", category: "Frontend", icon: "react-icon" },
+    { name: "Node.js", category: "Backend", icon: "node-icon" },
+    { name: "Tailwind CSS", category: "Frontend", icon: "tailwind-icon" },
+    { name: "MongoDB", category: "Database", icon: "mongo-icon" },
+    { name: "TypeScript", category: "Languages", icon: "ts-icon" },
   ];
 
   return (
@@ -26,7 +26,6 @@ export default function SkillsPage() {
               <TableRow>
                 <TableHead>Skill Name</TableHead>
                 <TableHead>Category</TableHead>
-                <TableHead>Proficiency</TableHead>
                 <TableHead>Icon</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
               </TableRow>
@@ -36,12 +35,6 @@ export default function SkillsPage() {
                 <TableRow key={idx}>
                   <TableCell className="font-medium">{item.name}</TableCell>
                   <TableCell>{item.category}</TableCell>
-                  <TableCell>
-                    <div className="flex items-center gap-2">
-                       <div className="h-2 w-24 bg-muted overflow-hidden rounded-full"><div className="h-full bg-primary" style={{width: item.proficiency}}></div></div>
-                       <span className="text-xs text-muted-foreground">{item.proficiency}</span>
-                    </div>
-                  </TableCell>
                   <TableCell>{item.icon}</TableCell>
                   <TableCell className="text-right text-primary cursor-pointer">Edit</TableCell>
                 </TableRow>

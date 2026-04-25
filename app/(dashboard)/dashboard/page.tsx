@@ -73,27 +73,21 @@ export default function DashboardOverview() {
 
         <Card className="col-span-full md:col-span-3 lg:col-span-4 glass border-border/50">
           <CardHeader>
-            <CardTitle>Top Performing Skills</CardTitle>
-            <CardDescription>Most viewed and interacted skills.</CardDescription>
+            <CardTitle>Top Skills</CardTitle>
+            <CardDescription>Key technologies utilized in projects.</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-6">
+            <div className="flex flex-wrap gap-2 pt-2">
               {[
-                { name: "React / Next.js", progress: 95, color: "bg-blue-500" },
-                { name: "TypeScript", progress: 88, color: "bg-blue-400" },
-                { name: "Tailwind CSS", progress: 92, color: "bg-teal-400" },
-                { name: "Node.js (Backend)", progress: 85, color: "bg-green-500" },
-                { name: "GSAP Animations", progress: 78, color: "bg-purple-500" },
+                "React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", 
+                "MongoDB", "Express", "GSAP Animations", "Framer Motion", "UI/UX Design"
               ].map((skill, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                     <span className="font-semibold">{skill.name}</span>
-                     <span className="text-muted-foreground font-bold">{skill.progress}%</span>
-                  </div>
-                  <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
-                     <div className={`h-full ${skill.color} rounded-full`} style={{ width: `${skill.progress}%` }} />
-                  </div>
-                </div>
+                <span 
+                  key={i} 
+                  className="px-3 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium hover:bg-primary/20 transition-colors cursor-default"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </CardContent>
