@@ -17,12 +17,12 @@ import {
 
 const navigation = [
   { name: "Overview", href: "/dashboard", icon: LayoutDashboard },
+  { name: "Skills", href: "/dashboard/skills", icon: LineChart },
   { name: "Projects", href: "/dashboard/projects", icon: FolderOpenDot },
-  { name: "Blogs", href: "/dashboard/blogs", icon: FileText },
   { name: "Experiences", href: "/dashboard/experiences", icon: Briefcase },
   { name: "Educations", href: "/dashboard/educations", icon: GraduationCap },
   { name: "Services", href: "/dashboard/services", icon: Wrench },
-  { name: "Skills", href: "/dashboard/skills", icon: LineChart },
+  { name: "Blogs", href: "/dashboard/blogs", icon: FileText },
   { name: "Contacts", href: "/dashboard/contacts", icon: MessageSquare },
   { name: "Audit Logs", href: "/dashboard/audit", icon: Activity },
 ];
