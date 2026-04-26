@@ -1,6 +1,4 @@
-import { blogs } from "../../data/index";
-import { Navbar } from "@/components/common/Navbar";
-import { Footer } from "@/components/common/Footer";
+import { blogs } from "@/app/data";
 import Image from "next/image";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -21,9 +19,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
     }
 
     return (
-        <main className="min-h-screen bg-background">
-            <Navbar />
-
+        <main className="min-h-screen bg-transparent">
             <article className="pt-32 pb-20 px-6">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <Link href="/#blog" className="inline-flex items-center gap-2 text-primary font-bold hover:underline group">
@@ -60,7 +56,6 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
                 </div>
             </article>
 
-            <Footer />
         </main>
     );
 }

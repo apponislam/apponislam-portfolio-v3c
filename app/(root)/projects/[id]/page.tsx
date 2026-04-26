@@ -1,4 +1,4 @@
-import { projects } from "../../data/index";
+import { projects } from "@/app/data";
 import ProjectDetailClient from "@/components/sections/ProjectDetailClient";
 import { notFound } from "next/navigation";
 
