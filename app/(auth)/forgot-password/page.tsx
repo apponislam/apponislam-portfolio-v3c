@@ -1,42 +1,45 @@
 import Link from "next/link";
-import { KeyRound } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 
 export default function ForgotPasswordPage() {
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2 text-center">
-        <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white shadow-lg mb-2">
-          <KeyRound className="w-6 h-6" />
-        </div>
-        <h1 className="text-3xl font-bold tracking-tight">Reset password</h1>
-        <p className="text-sm text-muted-foreground max-w-xs mx-auto">
-          Enter your email address and we&apos;ll send you a link to reset your password.
+      
+      <div className="flex flex-col gap-2">
+        <h2 className="text-3xl font-black text-zinc-900 dark:text-white tracking-tight">Recovery.</h2>
+        <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
+          Enter your registered email address and we&apos;ll send you a highly secure reset link.
         </p>
       </div>
       
-      <form className="flex flex-col gap-4 mt-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium leading-none" htmlFor="email">
-            Email address
+      <form className="flex flex-col gap-5 mt-6 mb-2">
+        
+        <div className="space-y-1">
+          <label className="text-sm font-bold text-zinc-700 dark:text-zinc-300 ml-2" htmlFor="email">
+            Recovery Email
           </label>
-          <input 
-            type="email" 
-            id="email" 
-            placeholder="name@example.com"
-            className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors"
-          />
+          <div className="relative">
+            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-400" />
+            <input 
+              type="email" 
+              id="email" 
+              placeholder="you@example.com"
+              className="flex h-14 w-full rounded-full border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 px-12 py-2 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007BFF] focus-visible:border-transparent placeholder:text-zinc-400 dark:text-white"
+            />
+          </div>
         </div>
 
         <button 
-          className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 mt-2 w-full shadow-md shadow-primary/20 transition-colors"
+          className="group inline-flex items-center justify-center rounded-full text-base font-bold bg-[#007BFF] text-white hover:bg-[#0056b3] h-14 px-4 py-2 mt-4 w-full shadow-[0_8px_20px_rgba(0,123,255,0.3)] hover:shadow-[0_8px_25px_rgba(0,123,255,0.4)] hover:-translate-y-0.5 transition-all"
         >
-          Send Reset Link
+          Send Magic Link
+          <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
         </button>
       </form>
       
-      <div className="mt-6 text-center text-sm">
-        <Link href="/sign-in" className="font-semibold flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors">
-          Return to sign in
+      <div className="mt-4 text-center text-sm font-medium">
+        <Link href="/sign-in" className="text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors">
+          Return to login sequence
         </Link>
       </div>
     </div>
